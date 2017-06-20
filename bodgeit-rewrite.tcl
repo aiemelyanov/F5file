@@ -1,5 +1,5 @@
 when HTTP_REQUEST {
-  if {[HTTP::path] eq "/isitthef5"} {
-        HTTP::url "http://www.isitthef5.com"
-  }
+	if { [HTTP::host] equals "jc-demof5-wp01-pip.westus2.cloudapp.azure.com" and [HTTP::uri] starts_with "/broken" } {
+		HTTP::redirect "http://isitthef5.com"
+	}
 }
