@@ -24,7 +24,7 @@ node {
       slackSend(
          channel: '#jenkins-builds',
          color: 'good',
-         message: 'Jon jc-demo-f5 Build Ran Successfully',
+         message: 'jc-demo-f5 Build ran successfully, someone go approve this Continuous Delivery!',
          teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )
@@ -49,7 +49,7 @@ node {
       slackSend(
          channel: '#jenkins-builds',
          color: 'good',
-         message: 'Jon jc-demo-f5 Node Re-enabled',
+         message: 'jc-demo-f5 Node 192.168.3.5 was re-enabled, production is online',
          teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )
