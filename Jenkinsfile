@@ -24,7 +24,7 @@ node {
       slackSend(
          channel: '#jenkins-builds',
          color: 'good',
-         message: 'jc-demo-f5 Build ran successfully, someone go approve this Continuous Delivery!',
+         message: 'jc-demo-f5 Build ran successfully, make sure site is in maintenance mode http://jc-demof5-wp01-pip.westus2.cloudapp.azure.com, begin server builds then someone approve this Continuous Delivery!',
          teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )
