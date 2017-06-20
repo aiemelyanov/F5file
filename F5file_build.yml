@@ -13,7 +13,7 @@
 
       - name: Mention the Self IP
         debug:
-            msg: "I have self IP {{ self_ip['/Common/192.168.1.4'].address }}"
+            msg: "I have self IP {{ self_ip['/Common/192.168.2.4'].address }}"
 
       - name: Mention the software
         debug:
