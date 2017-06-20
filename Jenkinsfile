@@ -1,5 +1,5 @@
 node {
-   stage('Preparation') { 
+   stage('Preparation') {
       // Get some code from a GitHub repository
       git 'https://github.com/mcgonagle/F5file.git'
    }
@@ -11,21 +11,21 @@ node {
    stage('Build') {
        //Ansible Playbook
        ansiblePlaybook(
-         colorized: true, 
-         inventory: 'hosts.ini', 
-         playbook: 'F5file_build.yml', 
+         colorized: true,
+         inventory: 'hosts.ini',
+         playbook: 'F5file_build.yml',
          sudoUser: null,
          extraVars: [
-            username: 'admin',
-            password: [value: 'adminadmin', hidden: true],
+            username: 'azureuser',
+            password: [value: 'Harrison123!', hidden: true],
             hosts: 'bigip_hosts'
          ])
       //chatops slack message that ansible run has completed
-      slackSend( 
-         channel: '#general', 
-         color: 'good', 
-         message: 'F5file Build Ran Successfully', 
-         teamDomain: 'uniopsteam', 
+      slackSend(
+         channel: '#general',
+         color: 'good',
+         message: 'Jon F5file Build Ran Successfully',
+         teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )
    }
@@ -36,21 +36,21 @@ node {
    stage('Re-Enable') {
        //Ansible Playbook
        ansiblePlaybook(
-         colorized: true, 
-         inventory: 'hosts.ini', 
-         playbook: 'F5file_enable.yml', 
+         colorized: true,
+         inventory: 'hosts.ini',
+         playbook: 'F5file_enable.yml',
          sudoUser: null,
          extraVars: [
-            username: 'admin',
-            password: [value: 'adminadmin', hidden: true],
+            username: 'azureuser',
+            password: [value: 'Harrison123!', hidden: true],
             hosts: 'bigip_hosts'
          ])
       //chatops slack message that ansible run has completed
-      slackSend( 
-         channel: '#general', 
-         color: 'good', 
-         message: 'F5file Node Re-enabled', 
-         teamDomain: 'uniopsteam', 
+      slackSend(
+         channel: '#general',
+         color: 'good',
+         message: 'F5file Node Re-enabled',
+         teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )
    }

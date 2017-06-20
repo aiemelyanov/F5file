@@ -13,7 +13,7 @@
 
       - name: Mention the Self IP
         debug:
-            msg: "I have self IP {{ self_ip['/Common/10.0.1.10'].address }}"
+            msg: "I have self IP {{ self_ip['/Common/192.168.1.4'].address }}"
 
       - name: Mention the software
         debug:
@@ -24,7 +24,7 @@
             server: "{{ inventory_hostname }}"
             user: "{{username}}"
             password: "{{password}}"
-            host: "10.0.2.167"
+            host: "192.168.3.5"
             name: "member1"
             validate_certs: "false"
             state: "present"
@@ -36,7 +36,7 @@
             server: "{{ inventory_hostname }}"
             user: "{{username}}"
             password: "{{password}}"
-            host: "10.0.2.168"
+            host: "192.168.3.6"
             name: "member2"
             validate_certs: "false"
             state: "present"
@@ -61,7 +61,7 @@
             state: "present"
             host: "{{ item }}"
             pool: "pool1"
-            port: "8080"
+            port: "80"
             validate_certs: "false"
         with_items:
             - member1
@@ -91,7 +91,7 @@
         bigip_virtual_server:
             server: "{{ inventory_hostname }}"
             description: "generic web VIP"
-            destination: "10.0.2.183"
+            destination: "192.168.2.10"
             user: "{{username}}"
             password: "{{password}}"
             name: "vip-1"
@@ -114,7 +114,7 @@
             session_state: "disabled"
             host: "{{ item }}"
             pool: "pool1"
-            port: "8080"
+            port: "80"
             validate_certs: "false"
         with_items:
             - member1
