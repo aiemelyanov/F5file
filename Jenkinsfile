@@ -1,7 +1,7 @@
 node {
    stage('Preparation') {
       // Get some code from a GitHub repository
-      git 'https://github.com/mcgonagle/F5file.git'
+      git 'https://github.com/jmcalalang/F5file.git'
    }
    stage('Testing') {
       //Run the tests
@@ -24,7 +24,7 @@ node {
       slackSend(
          channel: '#general',
          color: 'good',
-         message: 'Jon F5file Build Ran Successfully',
+         message: 'Jon jc-demo-f5 Build Ran Successfully',
          teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )
@@ -49,7 +49,7 @@ node {
       slackSend(
          channel: '#general',
          color: 'good',
-         message: 'F5file Node Re-enabled',
+         message: 'Jon jc-demo-f5 Node Re-enabled',
          teamDomain: 'uniopsteam',
          token: 'zkMRYtEXCEG3Q2FlUsS2Hjjv'
          )

@@ -12,7 +12,7 @@
             session_state: "enabled"
             host: "{{ item }}"
             pool: "pool1"
-            port: "8080"
+            port: "80"
             validate_certs: "false"
         with_items:
             - member1
