@@ -11,10 +11,6 @@
             include: "system_info,software,self_ip"
             validate_certs: "false"
 
-      - name: Mention the Self IP
-        debug:
-            msg: "I have self IP {{ self_ip['/Common/192.168.2.4'].address }}"
-
       - name: Mention the software
         debug:
             msg: "I have software version {{ software[0].version }}"
