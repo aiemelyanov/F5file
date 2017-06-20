@@ -22,7 +22,7 @@ node {
          ])
       //chatops slack message that ansible run has completed
       slackSend(
-         channel: '#general',
+         channel: '#jenkins-builds',
          color: 'good',
          message: 'Jon jc-demo-f5 Build Ran Successfully',
          teamDomain: 'uniopsteam',
@@ -47,7 +47,7 @@ node {
          ])
       //chatops slack message that ansible run has completed
       slackSend(
-         channel: '#general',
+         channel: '#jenkins-builds',
          color: 'good',
          message: 'Jon jc-demo-f5 Node Re-enabled',
          teamDomain: 'uniopsteam',
