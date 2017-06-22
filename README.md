@@ -38,6 +38,7 @@ sudo /usr/bin/pip-2.7 install f5-sdk
 
 6) Install git
 ```
+7) Andrey's changes TODO
 sudo yum install -y git
 
 ```
